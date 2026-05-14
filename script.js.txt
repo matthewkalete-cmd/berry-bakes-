@@ -1,0 +1,65 @@
+// Register the ScrollTrigger plugin
+gsap.registerPlugin(ScrollTrigger);
+
+document.addEventListener('DOMContentLoaded', () => {
+
+    // 1. Hero Text Entrance (Cascading effect)
+    const tl = gsap.timeline();
+    tl.from(".hero-content h1", {
+        y: 50,
+        opacity: 0,
+        duration: 1.2,
+        ease: "power4.out"
+    })
+    .from(".hero-content p", {
+        y: 20,
+        opacity: 0,
+        duration: 0.8,
+        ease: "power3.out"
+    }, "-=0.6") // Start slightly before h1 finishes
+    .from(".cta-button", {
+        scale: 0.8,
+        opacity: 0,
+        duration: 0.5,
+        ease: "back.out(1.7)"
+    }, "-=0.4");
+
+    // 2. Parallax Effect on Hero Background
+    gsap.to(".hero", {
+        backgroundPositionY: "30%",
+        ease: "none",
+        scrollTrigger: {
+            trigger: ".hero",
+            start: "top top",
+            end: "bottom top",
+            scrub: true // Link animation to scroll position
+        }
+    });
+
+    // 3. Staggered Menu Card Reveal
+    gsap.from(".card", {
+        scrollTrigger: {
+            trigger: ".grid",
+            start: "top 80%", // Starts when the grid is 80% down the screen
+            toggleActions: "play none none none"
+        },
+        y: 60,
+        opacity: 0,
+        duration: 1,
+        stagger: 0.2, // Each card waits 0.2s after the previous one
+        ease: "power2.out"
+    });
+
+    // 4. Subtle Footer "Pop"
+    gsap.from("footer h2", {
+        scrollTrigger: {
+            trigger: "footer",
+            start: "top 90%"
+        },
+        scale: 0.9,
+        opacity: 0,
+        duration: 1,
+        ease: "power1.inOut"
+    });
+
+});

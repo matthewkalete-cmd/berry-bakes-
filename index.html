@@ -1,64 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Berry Bakes | Artfully Crafted Treats</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&family=Poppins:wght@300;400&display=swap" rel="stylesheet">
-</head>
-<body>
-
-    <nav class="navbar">
-        <div class="logo">BERRY BAKES</div>
-        <ul class="nav-links">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#menu">Menu</a></li>
-            <li><a href="#about">Our Story</a></li>
-            <li><a href="#contact" class="btn-sm">Order Now</a></li>
-        </ul>
-    </nav>
-
-    <header id="home" class="hero">
-        <div class="hero-content">
-            <h1>Sweet Moments, <br><span>Baked Daily.</span></h1>
-            <p>Handcrafted pastries made with organic berries and a dash of magic.</p>
-            <a href="#menu" class="cta-button">Explore the Menu</a>
-        </div>
-    </header>
-
-    <section id="menu" class="gallery">
-        <h2>Today’s Favorites</h2>
-        <div class="grid">
-            <div class="card">
-                <div class="img-placeholder">🍓</div>
-                <h3>Strawberry Tart</h3>
-                <p>Crispy crust with fresh glazed berries.</p>
-            </div>
-            <div class="card">
-                <div class="img-placeholder">🫐</div>
-                <h3>Blueberry Muffin</h3>
-                <p>Bursting with wild blueberries and crumble.</p>
-            </div>
-            <div class="card">
-                <div class="img-placeholder">🍰</div>
-                <h3>Raspberry Velvet</h3>
-                <p>Light sponge with tart raspberry cream.</p>
-            </div>
-        </div>
-    </section>
-
-    <footer id="contact">
-        <h2>Visit Berry Bakes</h2>
-        <p>123 Pastry Lane, Sweetwater | Open 7am - 6pm</p>
-        <div class="socials">
-            <span>Instagram</span> • <span>Facebook</span> • <span>TikTok</span>
-        </div>
-    </footer>
-
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>We Cook - Premium Global Kitchen</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="./src/main.jsx"></script>
+    <script>
+      setTimeout(() => { AOS.init({ duration: 1000, once: true }); }, 500);
+    </script>
+  </body>
 </html>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 
-<script src="script.js"></script>
+
